@@ -12,7 +12,7 @@
   }
 
   // init an object
-  var slackClient = new NodeSlackClient(EVENT_NAME, token, onSlackMessage);
+  var slackClient = new NodeSlackClient(EVENT_NAME, process.env.SLACK_API_TOKEN, onSlackMessage);
 
   // send msg 
   slackClient.sendMessage(MESSAGE, function messageSent() {
