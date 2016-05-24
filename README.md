@@ -12,10 +12,10 @@
   }
 
   // init an object
-  var slackClient = new NodeSlackClient("NEXT-bag", token, onSlackMessage);
+  var slackClient = new NodeSlackClient(EVENT_NAME, token, onSlackMessage);
 
   // send msg 
-  slackClient.sendMessage('next bag in stock!', function messageSent() {
+  slackClient.sendMessage(MESSAGE, function messageSent() {
         
   });
 ```
