@@ -6,7 +6,7 @@ module.exports = function(eventName, slackToken, channelID, onMessage) {
     
     var TOKEN = process.env.SLACK_API_TOKEN || slackToken
         CHANNEL = process.env.SLACK_CHANNEL_ID || channelID,
-        rtm = new RtmClient(token, {logLevel: 'info'});
+        rtm = new RtmClient(slackToken, {logLevel: 'info'});
     
     rtm.start();
     
